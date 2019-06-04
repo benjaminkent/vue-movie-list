@@ -4,7 +4,8 @@
       li(v-for="movie in movies")
         h1 {{ movie.title }}
         p {{ movie.release_date }}
-        img.movie-image(:src="`https://image.tmdb.org/t/p/w500${movie.poster_path}`")
+        router-link(:to="`/movie/${movie.id}`")
+          img.movie-image(:src="`https://image.tmdb.org/t/p/w500${movie.poster_path}`")
 </template>
 
 <script>
